@@ -16,9 +16,9 @@ int main()
     //  mpz_set_ui(p1,564654651549685465161654);
     //  mpz_set_ui(q1,154981687198787198719287);
     //mpz_set_ui(e, 65536);
-    char inp1[1025]="564654651549685465161654";
+    char inp1[BITSTRENGTH+1]="564654651549685465161654";
     mpz_set_str(p1,inp1,10);
-    char inp2[1025]="154981687198787198719287";
+    char inp2[BITSTRENGTH+1]="154981687198787198719287";
     mpz_set_str(q1,inp2,10);
    // printf("\nEnter the value of p",mpz_get_str())
 
