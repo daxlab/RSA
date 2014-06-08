@@ -23,8 +23,6 @@ int main()
    // printf("\nEnter the value of p",mpz_get_str())
 
 
-
-
     mpz_nextprime(p,p1);
     mpz_nextprime(q,q1);
     mpz_init(n);
@@ -38,11 +36,15 @@ int main()
     mpz_t C;  mpz_init(C);
     mpz_t Dc; mpz_init(Dc);
 
+     char inp3[BITSTRENGTH+1]="9546584615";
+    mpz_set_str(M,inp3,10);
     /* Encryption  */
     mpz_powm(C,M,e,n);
+    printf("Encrypted Message is :  %s\n",mpz_get_str(NULL,10,C));
 
     /* Decryption  */
     mpz_powm(Dc,C,d,n);
+    printf("Decrypted Message is :  %s\n",mpz_get_str(NULL,10,Dc));
 
     mpz_clear(p);mpz_clear(q);mpz_clear(e);mpz_clear(d);mpz_clear(p1);mpz_clear(q1);mpz_clear(n);mpz_clear(phi);
     return 0;
