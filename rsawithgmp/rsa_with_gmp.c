@@ -47,6 +47,7 @@ int main()
     printf("Decrypted Message is :  %s\n",mpz_get_str(NULL,10,Dc));
 
     mpz_clear(p);mpz_clear(q);mpz_clear(e);mpz_clear(d);mpz_clear(p1);mpz_clear(q1);mpz_clear(n);mpz_clear(phi);
+    mpz_clear(M);mpz_clear(C);mpz_clear(Dc);
     return 0;
 }
 
