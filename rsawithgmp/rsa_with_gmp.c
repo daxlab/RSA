@@ -4,21 +4,33 @@
 #define BITSTRENGTH 1024
 int main()
 {
+
+    //scanf("%1024s",inp);
     mpz_t p,q,e,d,p1,q1,n,phi;
     mpz_init(p);mpz_init(p1);
     mpz_init(q);mpz_init(q1);
     mpz_init(e);
     //mpz_set_ui(e, 17);
-    //mpz_set_ui(e, 3);
-    mpz_set_ui(e, 65536);
-    mpz_set_ui(p1,5646546515564894968546516184165416541654165716546541654);
-    mpz_set_ui(q1,1549879465168719871984254654197871987198709809898719287);
+    mpz_set_ui(e, 3);
+
+    //  mpz_set_ui(p1,564654651549685465161654);
+    //  mpz_set_ui(q1,154981687198787198719287);
+    //mpz_set_ui(e, 65536);
+    char inp1[1025]="564654651549685465161654";
+    mpz_set_str(p1,inp1,10);
+    char inp2[1025]="154981687198787198719287";
+    mpz_set_str(q1,inp2,10);
+   // printf("\nEnter the value of p",mpz_get_str())
+
+
+
+
     mpz_nextprime(p,p1);
     mpz_nextprime(q,q1);
     mpz_init(n);
     mpz_mul(n,p,q);
     mpz_sub_ui(p1, p, 1);
-    mpz_sub_ui(q2, q, 1);
+    mpz_sub_ui(q1, q, 1);
     mpz_mul(phi,p1,q1);
     mpz_invert(d,e,phi);
 
