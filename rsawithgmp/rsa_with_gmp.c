@@ -36,7 +36,7 @@ int main()
     mpz_t C;  mpz_init(C);
     mpz_t Dc; mpz_init(Dc);
 
-     char inp3[BITSTRENGTH+1]="9546584615";
+     char inp3[BITSTRENGTH+1]="464684654548";
     mpz_set_str(M,inp3,10);
     /* Encryption  */
     mpz_powm(C,M,e,n);
